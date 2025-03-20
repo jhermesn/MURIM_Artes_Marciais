@@ -4,7 +4,7 @@
 ## Descrição
 O projeto **Murim Artes Marciais** é uma aplicação web que apresenta uma academia fictícia de artes marciais, com foco nas artes marciais chinesas. Ele inclui:
 
-- **Backend**: Desenvolvido em PHP com o framework Slim e PostgreSQL para armazenar informações sobre alunos, instrutores e aulas.
+- **Backend**: Desenvolvido em PHP e PostgreSQL para armazenar informações sobre alunos, instrutores e aulas.
 - **Frontend**: Construído com Next.js, React.js, TypeScript e Tailwind CSS para fornecer uma interface amigável, permitindo visualizar informações da academia, inscrever-se em aulas e acessar conteúdos relacionados.
 - **API REST**: Responsável pela comunicação entre o frontend e o banco de dados, implementando operações **CRUD**.
 - **Autenticação**: Garante que apenas usuários autorizados possam realizar determinadas ações, como inscrição em aulas ou acesso a conteúdo exclusivo.
