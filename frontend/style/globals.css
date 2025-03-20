@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #9333ea;
+  --primary-dark: #7e22ce;
+  --primary-light: #a855f7;
+  --background: #000000;
+  --foreground: #ffffff;
+  --accent: #4c1d95;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent hover:bg-purple-800 text-purple-500 hover:text-white font-bold py-2 px-6 border border-purple-700 hover:border-transparent rounded-md transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-white relative;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-16 h-1 bg-purple-600;
+  }
+
+  .card {
+    @apply bg-gray-900 rounded-lg p-6 shadow-lg border border-purple-900 hover:border-purple-600 transition-all duration-300;
+  }
+}
+
+/* Scrollbar personalizada */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7e22ce;
+}
+
+/* Animações */
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+/* Estilos para o calendário */
+.react-calendar {
+  @apply bg-gray-900 border border-purple-900 rounded-lg shadow-lg w-full max-w-md p-4;
+}
+
+.react-calendar__navigation {
+  @apply flex justify-between mb-4;
+}
+
+.react-calendar__navigation button {
+  @apply bg-gray-800 text-white p-2 rounded-md hover:bg-purple-800 transition-colors;
+}
+
+.react-calendar__navigation button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-center text-gray-400 font-semibold mb-2;
+}
+
+.react-calendar__month-view__days {
+  @apply grid grid-cols-7 gap-1;
+}
+
+.react-calendar__tile {
+  @apply bg-gray-800 text-white p-2 rounded-md hover:bg-purple-800 transition-colors text-center;
+}
+
+.react-calendar__tile--active {
+  @apply bg-purple-700;
+}
+
+.react-calendar__tile:disabled {
+  @apply opacity-50 cursor-not-allowed hover:bg-gray-800;
+}
+
+/* Estilos para o picker de horas */
+.react-time-picker {
+  @apply bg-gray-900 border border-purple-900 rounded-lg p-2;
+}
+
+.react-time-picker__wrapper {
+  @apply border-0;
+}
+
+.react-time-picker__inputGroup {
+  @apply text-white;
+}
+
+.react-time-picker__button {
+  @apply text-purple-500 hover:text-purple-400;
+}
+
+.react-time-picker__clock {
+  @apply bg-gray-900 border border-purple-900;
+}
+
